@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Flexbox Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <style>
+      .example-box {
+        background-color: #e9ecef;
+        border: 1px solid #dee2e6;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+      .flex-item {
+        background-color: #0d6efd;
+        color: white;
+        padding: 1rem;
+        margin: 0.5rem;
+        text-align: center;
+      }
+      .section {
+        margin-bottom: 3rem;
+      }
+    </style>
+  </head>
+  <body class="container py-5">
+    <h1 class="mb-4">Guía de Flexbox en Bootstrap 5.3.6</h1>
+
+    <!-- Display Flex -->
+    <section class="section">
+      <h2 class="h4 mb-3">Display Flex</h2>
+      <p><code>d-flex</code> crea un contenedor flex de nivel de bloque (ocupa todo el ancho disponible), mientras que <code>d-inline-flex</code> crea un contenedor flex de nivel de línea (ocupa solo el ancho necesario para su contenido y permite que otros elementos fluyan a su lado).</p>
+      <div class="example-box mb-4">
+        <h3 class="h6">d-flex (Block-level flex container)</h3>
+        <span>Texto antes.</span>
+        <div class="d-flex p-2 " style="border: 1px solid blue;">
+          <div class="flex-item p-2" style="border: 1px dashed lightblue;">Item 1</div>
+          <div class="flex-item p-2" style="border: 1px dashed lightblue;">Item 2</div>
+          <div class="flex-item p-2" style="border: 1px dashed lightblue;">Item 3</div>
+        </div>
+        <span>Texto después.</span>
+        <small class="form-text text-muted">Este contenedor <code>d-flex</code> ocupa todo el ancho disponible (borde azul).</small>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">d-inline-flex (Inline-level flex container)</h3>
+        <span>Texto antes.</span>
+        <div class="d-inline-flex p-2" style="border: 1px solid green;">
+          <div class="flex-item p-2" style="border: 1px dashed lightgreen;">Item 1</div>
+          <div class="flex-item p-2" style="border: 1px dashed lightgreen;">Item 2</div>
+          <div class="flex-item p-2" style="border: 1px dashed lightgreen;">Item 3</div>
+        </div>
+        <span>Texto después.</span>
+        <br>
+        <small class="form-text text-muted">Este contenedor <code>d-inline-flex</code> (borde verde) solo ocupa el espacio de su contenido y se muestra en línea con el texto circundante.</small>
+      </div>
+    </section>
+
+    <!-- Direction -->
+    <section class="section">
+      <h2 class="h4 mb-3">Direction: Establece la dirección en que se colocan los elementos dentro del contenedor.</h2>
+      <div class="example-box">
+        <h3 class="h6">flex-row (default)</h3>
+        <div class="d-flex flex-row">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">flex-row-reverse</h3>
+        <div class="d-flex flex-row-reverse">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">flex-column</h3>
+        <div class="d-flex flex-column">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">flex-column-reverse</h3>
+        <div class="d-flex flex-column-reverse">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Justify Content -->
+    <section class="section">
+      <h2 class="h4 mb-3">Justify Content: Controla la alineación de los elementos en el eje principal (horizontal en flex-row).</h2>
+      <div class="example-box">
+        <h3 class="h6">justify-content-start</h3>
+        <div class="d-flex justify-content-start">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">justify-content-end</h3>
+        <div class="d-flex justify-content-end">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">justify-content-center</h3>
+        <div class="d-flex justify-content-center">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">justify-content-between</h3>
+        <div class="d-flex justify-content-between">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">justify-content-around</h3>
+        <div class="d-flex justify-content-around">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">justify-content-evenly</h3>
+        <div class="d-flex justify-content-evenly">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Align Items -->
+    <section class="section">
+      <h2 class="h4 mb-3">Align Items: Controla la alineación de los elementos en el eje secundario (vertical en flex-row).</h2>
+      <div class="example-box" style="height: 200px;">
+        <h3 class="h6">align-items-start</h3>
+        <div class="d-flex align-items-start h-100">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box" style="height: 200px;">
+        <h3 class="h6">align-items-end</h3>
+        <div class="d-flex align-items-end h-100">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box" style="height: 200px;">
+        <h3 class="h6">align-items-center</h3>
+        <div class="d-flex align-items-center h-100">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box" style="height: 200px;">
+        <h3 class="h6">align-items-baseline</h3>
+        <div class="d-flex align-items-baseline h-100">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box" style="height: 200px;">
+        <h3 class="h6">align-items-stretch</h3>
+        <div class="d-flex align-items-stretch h-100">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Align Self -->
+    <section class="section">
+      <h2 class="h4 mb-3">Align Self: Permite sobrescribir la alineación de un elemento específico.</h2>
+      <div class="example-box" style="height: 200px;">
+        <h3 class="h6">align-self-*</h3>
+        <div class="d-flex h-100">
+          <div class="flex-item align-self-start">Start</div>
+          <div class="flex-item align-self-center">Center</div>
+          <div class="flex-item align-self-end">End</div>
+          <div class="flex-item align-self-baseline">Baseline</div>
+          <div class="flex-item align-self-stretch">Stretch</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fill -->
+    <section class="section">
+      <h2 class="h4 mb-3">Fill: Fuerza a los elementos a ocupar el mismo ancho/alto</h2>
+      <div class="example-box">
+        <h3 class="h6">flex-fill</h3>
+        <div class="d-flex">
+          <div class="flex-item flex-fill">flex-fill</div>
+          <div class="flex-item flex-fill">flex-fill</div>
+          <div class="flex-item flex-fill">flex-fill</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grow and Shrink -->
+    <section class="section">
+      <h2 class="h4 mb-3">Grow and Shrink: Controla si un elemento puede crecer o encogerse</h2>
+      <div class="example-box">
+        <h3 class="h6">flex-grow-1</h3>
+        <div class="d-flex">
+          <div class="flex-item">Normal</div>
+          <div class="flex-item flex-grow-1">flex-grow-1</div>
+          <div class="flex-item">Normal</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">flex-shrink-1</h3>
+        <div class="d-flex">
+          <div class="flex-item" style="width: 200px;">Wide Item</div>
+          <div class="flex-item flex-shrink-1" style="width: 200px;">flex-shrink-1</div>
+          <div class="flex-item" style="width: 200px;">Wide Item</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stacks -->
+    <section class="section">
+      <h2 class="h4 mb-3">Stacks: shorthands</h2>
+      <div class="example-box">
+        <h3 class="h6">vstack = d-flex + flex-column
+        </h3>
+        <div class="vstack gap-2">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+
+      <div class="example-box">
+        <h3 class="h6">hstack = d-flex + flex-row </h3>
+        <div class="hstack gap-2">
+          <div class="flex-item">Item 1</div>
+          <div class="flex-item">Item 2</div>
+          <div class="flex-item">Item 3</div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>

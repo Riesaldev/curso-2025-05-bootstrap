@@ -239,8 +239,9 @@ donde:
 
 ### Visibilidad
 
-
-
+* visible
+* invisible
+* visually-hidden (oculta elementos pero los deja accesibles para tecnologías asistivas como screen readers)
 
 
 ## Flexbox y Grid
@@ -258,6 +259,65 @@ Aplican en diferentes clases de utilidad
 
 ### Flexbox
 
+Permite anilear elementos en un mismo eje sin entrar a trabajar con filas y columnas bidimensionales, es decir trabajamos en una dimensión.
+
+d viene de display
+
+* d-flex
+* d-inline-flex
+
+
+Diferencia con Tailwind:
+* Tailwind CSS: flex
+* Bootstrap CSS: d-flex
+
+* d-{breakpoint}-flex
+* d-{breakpoint}-inline-flex
+
+* d-flex flex-row
+* d-flex flex-row-reverse
+* d-flex flex-column
+* d-flex flex-column-reverse
+
+Diferencia con Tailwind CSS:
+
+* Tailwind CSS: flex-row, flex-col
+* Bootstrap CSS: flex-row, flex-column
+
+* d-flex justify-content-start
+* d-flex justify-content-end
+* d-flex justify-content-center
+* d-flex justify-content-between
+* d-flex justify-content-around
+* d-flex justify-content-evenly
+
+* d-flex align-items-start
+* d-flex align-items-end
+* d-flex align-items-center
+* d-flex align-items-baseline
+* d-flex align-items-stretch
+
+* align-self-start
+* align-self-end
+* align-self-center
+* align-self-baseline
+* align-self-stretch
+
+* flex-fill
+
+* flex-grow-1
+* flex-shrink-1
+
+* Stacks: son shorthand helpers que usan flexbox por debajo y ayudan a estructurar layouts rápidamente.
+    * vstack
+    * hstack
+
+```html
+<div class="vstack gap-2 col-md-5 mx-auto">
+  <button type="button" class="btn btn-secondary">Save changes</button>
+  <button type="button" class="btn btn-outline-secondary">Cancel</button>
+</div>
+```
 
 ### Grid
 
