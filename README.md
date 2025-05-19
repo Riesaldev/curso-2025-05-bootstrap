@@ -257,6 +257,15 @@ Aplican en diferentes clases de utilidad
 * xl: 1200px,
 * xxl: 1400px
 
+Diferencia con Tailwind CSS:
+
+* sm
+* md
+* lg
+* xl
+* 2xl
+
+
 ### Flexbox
 
 Permite anilear elementos en un mismo eje sin entrar a trabajar con filas y columnas bidimensionales, es decir trabajamos en una dimensión.
@@ -323,15 +332,125 @@ Diferencia con Tailwind CSS:
 
 #### Grid nativo de Bootstrap (12col)
 
-* container
+* container (es el que se usa normalmente)
+* container-sm
+* container-md
+* container-lg
+* container-xl
+* container-xxl
+* container-fluid
+
+Dentro de un container:
+
 * row
 * col
 
+```html
+<div class="container">
+    <div class="row">
+        <div class="col">
+                Contenido en columna 1
+        </div>
+        <div class="col">
+                Contenido en columna 2
+        </div>
+    </div>
+</div>
+```
+
+Por defecto bootstrap considera el grid con 12 columnas virtuales.
+
+Si no indicamos un ancho, se toma automáticamente de forma equitativa, por ejemplo estas dos columnas ocupan 6 cada una:
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+</div>
+```
+
+Ocuparían ancho 4 cada una:
+
+```html
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+</div>
+```
+
+Teniendo en cuenta los breakpoints para responsive:
+
+* Bootstrap: col-{breakpoint}-{1/12}
+* Tailwind: grid grid-cols-1 md:grid-cols-3
+
+Ejemplo tailwind: 
+
+```html
+<div class="grid grid-cols-4 gap-4">
+  <div>01</div>
+  <!-- ... -->
+  <div>09</div>
+</div>
+```
+
+Opción similar a tailwind pero con el grid nativo de bootstrap:
+
+```html
+<div class="container text-center">
+  <div class="row row-cols-1 row-cols-md-3">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+```
+Idóneo para cuando estamos agregando divs desde un bucle for y no queremos preocuparnos de cuando abrir y cerrar rows y de diferenciar cada item columna con una clase columna diferente.
+
+Esto se usa habitualmente para crear:
+
+* dashboard de administración
+* página de inicio que muestra diferentes progresos
+* grid de productos, ecommerce
+* grid de features, beneficios, ventajas
+* sección de equipo
+* footer
+* menú de una navbar (Flyout Menus en tailwind)
+
+Este grid es nativo de bootstrap y se creó antes de que se integrara CSS Grid.
+
 #### CSS Grid (desactivado por defecto)
+
+Desde v5.1 de Bootstrap, desactivado por defecto.
+
+https://getbootstrap.com/docs/5.3/layout/css-grid/
+
+```html
+<div class="grid text-center">
+  <div class="g-col-6">.g-col-6</div>
+  <div class="g-col-6">.g-col-6</div>
+</div>
+```
+
+Más similar a tailwind, pero con la filosofía de bootstrap.
+
 
 ## Componentes
 
 ### Componentes básicos
+
+* Button
+* Button Group
+* Badge
+* Tables
+* Cards
+* Images
+* List Groups
 
 ### Componentes de navegación
 
@@ -340,3 +459,10 @@ Diferencia con Tailwind CSS:
 ### Componentes de contenido dinámico
 
 ## Formularios
+
+# Integración con frameworks:
+
+* Angular: se suele usar NgBootstrap en forma de componentes de Angular.
+    * Bootstrap CSS: https://ng-bootstrap.github.io/
+    * PrimeNG: que está basado en Tailwind CSS
+    * Angular Material: que está basado en Material Design

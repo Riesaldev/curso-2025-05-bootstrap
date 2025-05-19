@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guía visual grid Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <h1 class="mb-4 text-center">Guía visual del sistema de grid nativo de 12 columnas de Bootstrap 5.3</h1>
+
+      <!-- 1. CONTENEDORES: lo ponemos fuera de ningún otro container para que se aprecie qué hace cada uno -->
+      <section id="containers">
+        <h2 class="mt-4 mb-3">1. Contenedores (Containers)</h2>
+        <p>Los contenedores son los bloques de construcción más básicos del sistema de grid de Bootstrap. Se utilizan para contener, rellenar y alinear tu contenido dentro de un dispositivo o viewport determinado.</p>
+
+        <h3 class="mt-3 mb-2">1.1. Contenedor de Ancho Fijo (<code>.container</code>)</h3>
+        <p>El <code>.container</code> proporciona un contenedor de ancho fijo responsivo. Su <code>max-width</code> cambia en cada breakpoint.</p>
+        
+        
+        <div class="container bg-info-subtle border border-info p-3 mb-3">
+          <p>Este es un <code>.container</code>. Su ancho se ajusta según el tamaño de la pantalla, pero se mantiene centrado y con márgenes a los lados en pantallas grandes.</p>
+          <div class="row">
+            <div class="col bg-light p-2 border">Contenido dentro del container</div>
+          </div>
+        </div>
+        <pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <h3 class="mt-3 mb-2">1.2. Contenedor de Ancho Completo (<code>.container-fluid</code>)</h3>
+        <p>El <code>.container-fluid</code> se extiende para ocupar el 100% del ancho del viewport.</p>
+        <div class="container-fluid bg-info-subtle border border-info p-3 mb-3">
+          <p>Este es un <code>.container-fluid</code>. Siempre ocupa todo el ancho disponible.</p>
+          <div class="row">
+            <div class="col bg-light p-2 border">Contenido dentro del container-fluid</div>
+          </div>
+        </div>
+        <pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container-fluid"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+
+        <h3 class="mt-3 mb-2">1.3. Contenedores Responsivos (<code>.container-sm</code>, <code>.container-md</code>, etc.)</h3>
+        <p>Puedes usar clases como <code>.container-sm</code>, <code>.container-md</code>, <code>.container-lg</code>, <code>.container-xl</code>, y <code>.container-xxl</code> para crear contenedores que son 100% anchos hasta un breakpoint específico, y luego se comportan como un <code>.container</code> normal.</p>
+        <div class="container-md bg-info-subtle border border-info p-3 mb-3">
+          <p>Este es un <code>.container-md</code>. Será de ancho completo en pantallas pequeñas (<code>sm</code>) y medianas (<code>md</code>) hacia abajo, y luego tendrá un ancho fijo en pantallas más grandes.</p>
+           <div class="row">
+            <div class="col bg-light p-2 border">Contenido dentro del container-md</div>
+          </div>
+        </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container-md"&gt;
+  ...
+&lt;/div&gt;</code></pre>
+      </section>
+
+
+    <div class="container mt-3 pb-5">
+
+      <hr class="my-5">
+      
+      <!-- 2. FILAS Y COLUMNAS -->
+      <section id="rows-cols">
+        <h2 class="mt-4 mb-3">2. Filas (Rows) y Columnas (Columns)</h2>
+        <p>Las filas (<code>.row</code>) son contenedores para las columnas. Las columnas (<code>.col</code> o <code>.col-*</code>) crean los espacios para tu contenido. <strong>Debes colocar el contenido dentro de las columnas, y solo las columnas pueden ser hijos inmediatos de las filas.</strong></p>
+
+        <h3 class="mt-3 mb-2">2.1. Columnas de Ancho Automático (<code>.col</code>)</h3>
+        <p>Bootstrap puede distribuir el espacio horizontal disponible entre las columnas de forma automática. Si solo usas <code>.col</code>, cada columna tomará una fracción igual del ancho disponible.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: 2 columnas iguales</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col bg-light p-2 border">1 de 2 (<code>.col</code>)</div>
+              <div class="col bg-light p-2 border">2 de 2 (<code>.col</code>)</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;Columna 1&lt;/div&gt;
+    &lt;div class="col"&gt;Columna 2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: 3 columnas iguales</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col bg-light p-2 border">1 de 3 (<code>.col</code>)</div>
+              <div class="col bg-light p-2 border">2 de 3 (<code>.col</code>)</div>
+              <div class="col bg-light p-2 border">3 de 3 (<code>.col</code>)</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;Columna 1&lt;/div&gt;
+    &lt;div class="col"&gt;Columna 2&lt;/div&gt;
+    &lt;div class="col"&gt;Columna 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h3 class="mt-3 mb-2">2.2. Estableciendo el Ancho de una Columna</h3>
+        <p>Puedes especificar el ancho de una columna usando <code>.col-*</code> donde <code>*</code> es un número del 1 al 12. Esto es útil cuando quieres que una columna ocupe un ancho específico y las demás se ajusten.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: Una columna con ancho específico, las otras automáticas</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col bg-light p-2 border">Columna Automática</div>
+              <div class="col-6 bg-light p-2 border">Columna de 6 unidades (<code>.col-6</code>) - Ocupa la mitad</div>
+              <div class="col bg-light p-2 border">Columna Automática</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;Automática&lt;/div&gt;
+    &lt;div class="col-6"&gt;Ancho 6&lt;/div&gt;
+    &lt;div class="col"&gt;Automática&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h3 class="mt-3 mb-2">2.3. Columnas de Ancho Fijo (<code>.col-*</code>)</h3>
+        <p>El sistema de grid de Bootstrap se basa en 12 columnas. Puedes especificar cuántas de estas 12 columnas virtuales quieres que ocupe un elemento.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: Diferentes anchos sumando 12</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col-4 bg-light p-2 border"><code>.col-4</code> (4 de 12)</div>
+              <div class="col-8 bg-light p-2 border"><code>.col-8</code> (8 de 12)</div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-3 bg-light p-2 border"><code>.col-3</code></div>
+              <div class="col-6 bg-light p-2 border"><code>.col-6</code></div>
+              <div class="col-3 bg-light p-2 border"><code>.col-3</code></div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12 bg-light p-2 border"><code>.col-12</code> (Ocupa todo el ancho)</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;!-- Fila 1 --&gt;
+&lt;div class="row"&gt;
+  &lt;div class="col-4"&gt;.col-4&lt;/div&gt;
+  &lt;div class="col-8"&gt;.col-8&lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- Fila 2 --&gt;
+&lt;div class="row mt-2"&gt;
+  &lt;div class="col-3"&gt;.col-3&lt;/div&gt;
+  &lt;div class="col-6"&gt;.col-6&lt;/div&gt;
+  &lt;div class="col-3"&gt;.col-3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <hr class="my-5">
+
+      <!-- Sección de Grid Responsivo -->
+      <section id="responsive-grid">
+        <h2 class="mt-4 mb-3">3. Grid Responsivo</h2>
+        <p>Bootstrap incluye clases para construir layouts responsivos que se adaptan a diferentes tamaños de pantalla: extra pequeño (xs, implícito), pequeño (sm), mediano (md), grande (lg), extra grande (xl) y extra extra grande (xxl).</p>
+        <p>Puedes usar combinaciones de estas clases para crear diseños dinámicos. Por ejemplo, <code>.col-12 .col-md-6 .col-lg-4</code> significaría:</p>
+        <ul>
+          <li>En pantallas extra pequeñas (por defecto, si no hay otra clase <code>.col-*</code>): ocupa 12 columnas (ancho completo).</li>
+          <li>En pantallas medianas (<code>md</code>) y mayores: ocupa 6 columnas (la mitad del ancho).</li>
+          <li>En pantallas grandes (<code>lg</code>) y mayores: ocupa 4 columnas (un tercio del ancho).</li>
+        </ul>
+
+        <h3 class="mt-3 mb-2">3.1. Ejemplo Responsivo Básico</h3>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: Columnas que se apilan en pantallas pequeñas.</strong> (Redimensiona tu navegador para ver el efecto)</p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col-12 col-md-8 bg-light p-2 border"><code>.col-12 .col-md-8</code> (Ancho completo en &lt;md, 8/12 en &gt;=md)</div>
+              <div class="col-12 col-md-4 bg-light p-2 border"><code>.col-12 .col-md-4</code> (Ancho completo en &lt;md, 4/12 en &gt;=md)</div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-12 col-sm-6 col-lg-3 bg-light p-2 border"><code>.col-12 .col-sm-6 .col-lg-3</code></div>
+              <div class="col-12 col-sm-6 col-lg-3 bg-light p-2 border"><code>.col-12 .col-sm-6 .col-lg-3</code></div>
+              <div class="col-12 col-sm-6 col-lg-3 bg-light p-2 border"><code>.col-12 .col-sm-6 .col-lg-3</code></div>
+              <div class="col-12 col-sm-6 col-lg-3 bg-light p-2 border"><code>.col-12 .col-sm-6 .col-lg-3</code></div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;!-- Fila 1 --&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-12 col-md-8"&gt;Contenido 1&lt;/div&gt;
+    &lt;div class="col-12 col-md-4"&gt;Contenido 2&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Fila 2: 4 columnas en lg, 2 en sm, 1 en xs --&gt;
+  &lt;div class="row mt-2"&gt;
+    &lt;div class="col-12 col-sm-6 col-lg-3"&gt;A&lt;/div&gt;
+    &lt;div class="col-12 col-sm-6 col-lg-3"&gt;B&lt;/div&gt;
+    &lt;div class="col-12 col-sm-6 col-lg-3"&gt;C&lt;/div&gt;
+    &lt;div class="col-12 col-sm-6 col-lg-3"&gt;D&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h3 class="mt-3 mb-2">3.2. Clases <code>row-cols-*</code> para Filas</h3>
+        <p>También puedes controlar cuántas columnas aparecen por fila en diferentes breakpoints usando las clases <code>.row-cols-*</code> en el elemento <code>.row</code>. Esto es útil para crear cuadrículas de tarjetas o elementos similares.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: <code>.row-cols-md-3</code> (3 columnas por fila en 'md' y superior, 1 por defecto)</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row row-cols-1 row-cols-md-3">
+              <div class="col bg-light p-2 border">Columna 1 (debería ser 1/3 en md+)</div>
+              <div class="col bg-light p-2 border">Columna 2 (debería ser 1/3 en md+)</div>
+              <div class="col bg-light p-2 border">Columna 3 (debería ser 1/3 en md+)</div>
+              <div class="col bg-light p-2 border">Columna 4 (debería ser 1/3 en md+, iniciando nueva fila visual en md+)</div>
+              <div class="col bg-light p-2 border">Columna 5</div>
+              <div class="col bg-light p-2 border">Columna 6</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row row-cols-1 row-cols-md-3"&gt; &lt;!-- 1 col por defecto, 3 cols en md y más grande --&gt;
+    &lt;div class="col"&gt;Elemento 1&lt;/div&gt;
+    &lt;div class="col"&gt;Elemento 2&lt;/div&gt;
+    &lt;div class="col"&gt;Elemento 3&lt;/div&gt;
+    &lt;div class="col"&gt;Elemento 4&lt;/div&gt;
+    &lt;div class="col"&gt;Elemento 5&lt;/div&gt;
+    &lt;div class="col"&gt;Elemento 6&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <hr class="my-5">
+
+      <!-- Sección de Anidamiento -->
+      <section id="nesting">
+        <h2 class="mt-4 mb-3">4. Anidamiento (Nesting)</h2>
+        <p>Puedes anidar filas y columnas dentro de otras columnas. Las filas anidadas también tendrán un total de 12 columnas disponibles (o las que especifiques con <code>.col-*</code>).</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: Anidamiento de Grid</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col-sm-9 bg-light p-2 border">
+                Nivel 1: <code>.col-sm-9</code>
+                <div class="row mt-2">
+                  <div class="col-8 col-sm-6 bg-secondary-subtle p-2 border">
+                    Nivel 2: <code>.col-8 .col-sm-6</code>
+                  </div>
+                  <div class="col-4 col-sm-6 bg-secondary-subtle p-2 border">
+                    Nivel 2: <code>.col-4 .col-sm-6</code>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3 bg-light p-2 border">
+                Nivel 1: <code>.col-sm-3</code>
+              </div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-9"&gt;
+      Columna Principal (9 unidades en sm+)
+      &lt;div class="row"&gt; &lt;!-- Fila Anidada --&gt;
+        &lt;div class="col-8 col-sm-6"&gt;Anidada (8/12 por defecto, 6/12 en sm+)&lt;/div&gt;
+        &lt;div class="col-4 col-sm-6"&gt;Anidada (4/12 por defecto, 6/12 en sm+)&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="col-sm-3"&gt;
+      Columna Lateral (3 unidades en sm+)
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <hr class="my-5">
+      
+      <!-- Sección de Utilidades de Alineación, Orden y Offset -->
+      <section id="utilities">
+        <h2 class="mt-4 mb-3">5. Utilidades Adicionales del Grid</h2>
+        <p>Bootstrap ofrece clases de utilidad para alinear y ordenar columnas, así como para crear offsets (desplazamientos).</p>
+
+        <h3 class="mt-3 mb-2">5.1. Alineación Vertical</h3>
+        <p>Puedes alinear verticalmente las columnas dentro de una fila usando <code>.align-items-start</code>, <code>.align-items-center</code>, o <code>.align-items-end</code> en la clase <code>.row</code>.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: Alineación Vertical</strong> (Se necesita contenido de diferente altura para ver el efecto)</p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <p class="mb-1"><code>.align-items-start</code> en la fila:</p>
+            <div class="row align-items-start border" style="min-height: 100px;">
+              <div class="col bg-light p-2 border">Una columna</div>
+              <div class="col bg-light p-2 border">Otra columna con más texto para que sea más alta.</div>
+              <div class="col bg-light p-2 border">Última columna</div>
+            </div>
+            <p class="mt-3 mb-1"><code>.align-items-center</code> en la fila:</p>
+            <div class="row align-items-center border" style="min-height: 100px;">
+              <div class="col bg-light p-2 border">Una columna</div>
+              <div class="col bg-light p-2 border">Otra columna con más texto para que sea más alta.</div>
+              <div class="col bg-light p-2 border">Última columna</div>
+            </div>
+            <p class="mt-3 mb-1"><code>.align-items-end</code> en la fila:</p>
+            <div class="row align-items-end border" style="min-height: 100px;">
+              <div class="col bg-light p-2 border">Una columna</div>
+              <div class="col bg-light p-2 border">Otra columna con más texto para que sea más alta.</div>
+              <div class="col bg-light p-2 border">Última columna</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;!-- Alineadas Arriba --&gt;
+  &lt;div class="row align-items-start" style="min-height: 10rem;"&gt;
+    &lt;div class="col"&gt;Columna 1&lt;/div&gt;
+    &lt;div class="col"&gt;Columna 2 más alta&lt;/div&gt;
+    &lt;div class="col"&gt;Columna 3&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Alineadas al Centro --&gt;
+  &lt;div class="row align-items-center" style="min-height: 10rem;"&gt;
+    &lt;div class="col"&gt;Columna 1&lt;/div&gt;
+    &lt;div class="col"&gt;Columna 2 más alta&lt;/div&gt;
+    &lt;div class="col"&gt;Columna 3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        
+        <h3 class="mt-3 mb-2">5.2. Alineación Horizontal de Columnas (<code>justify-content</code>)</h3>
+        <p>Puedes controlar la alineación horizontal de las columnas dentro de una fila (si no ocupan todo el ancho disponible) usando clases como <code>.justify-content-start</code> (defecto), <code>.justify-content-center</code>, <code>.justify-content-end</code>, <code>.justify-content-around</code>, o <code>.justify-content-between</code> en la clase <code>.row</code>.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: <code>.justify-content-center</code></strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row justify-content-center">
+              <div class="col-md-4 bg-light p-2 border">Columna 1 (4/12)</div>
+              <div class="col-md-4 bg-light p-2 border">Columna 2 (4/12)</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row justify-content-center"&gt;
+    &lt;div class="col-md-4"&gt;Columna 1&lt;/div&gt;
+    &lt;div class="col-md-4"&gt;Columna 2&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <h3 class="mt-3 mb-2">5.3. Desplazamiento de Columnas (Offsetting)</h3>
+        <p>Mueve columnas a la derecha usando clases <code>.offset-*</code>. Estas clases incrementan el margen izquierdo de una columna por <code>*</code> columnas. Por ejemplo, <code>.offset-md-4</code> mueve <code>.col-md-4</code> sobre cuatro columnas en el breakpoint <code>md</code>.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: Offset</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col-md-4 bg-light p-2 border"><code>.col-md-4</code></div>
+              <div class="col-md-4 offset-md-4 bg-light p-2 border"><code>.col-md-4 .offset-md-4</code></div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-3 offset-md-3 bg-light p-2 border"><code>.col-md-3 .offset-md-3</code></div>
+              <div class="col-md-3 offset-md-3 bg-light p-2 border"><code>.col-md-3 .offset-md-3</code></div>
+            </div>
+             <div class="row mt-2">
+              <div class="col-md-6 offset-md-3 bg-light p-2 border"><code>.col-md-6 .offset-md-3</code> (Centrado)</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;.col-md-4&lt;/div&gt;
+    &lt;div class="col-md-4 offset-md-4"&gt;.col-md-4 .offset-md-4&lt;/div&gt; &lt;!-- Se desplaza 4 columnas --&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        
+        <h3 class="mt-3 mb-2">5.4. Reordenamiento de Columnas (Ordering)</h3>
+        <p>Puedes cambiar el orden visual de tu contenido con las clases <code>.order-*</code>. Estas clases van desde <code>.order-1</code> hasta <code>.order-5</code>. También hay <code>.order-first</code> (equivalente a <code>.order-0</code>) y <code>.order-last</code> (equivalente a <code>.order-6</code>).</p>
+         <p>También puedes usar clases responsivas como <code>.order-md-*</code>.</p>
+        <div class="bg-warning-subtle border border-warning p-3 mb-3 rounded">
+          <p><strong>Ejemplo: Reordenamiento</strong></p>
+          <div class="container bg-info-subtle border border-info p-3 mb-3">
+            <div class="row">
+              <div class="col bg-light p-2 border">Primero en el código, sin orden específico.</div>
+              <div class="col order-5 bg-light p-2 border">Segundo en el código, <code>.order-5</code></div>
+              <div class="col order-1 bg-light p-2 border">Tercero en el código, <code>.order-1</code></div>
+            </div>
+            <div class="row mt-2">
+              <div class="col order-last bg-light p-2 border">Primero en el código, <code>.order-last</code></div>
+              <div class="col bg-light p-2 border">Segundo en el código, sin orden.</div>
+              <div class="col order-first bg-light p-2 border">Tercero en el código, <code>.order-first</code></div>
+            </div>
+            <p class="mt-3 mb-1"><strong>Ejemplo responsivo:</strong> (Normal en pantallas pequeñas, reordenado en 'md' y superior)</p>
+             <div class="row">
+              <div class="col-md-4 order-md-2 bg-light p-2 border">Bloque 1 (<code>order-md-2</code>) - Debería ser el segundo en MD+</div>
+              <div class="col-md-4 order-md-1 bg-light p-2 border">Bloque 2 (<code>order-md-1</code>) - Debería ser el primero en MD+</div>
+              <div class="col-md-4 order-md-3 bg-light p-2 border">Bloque 3 (<code>order-md-3</code>) - Debería ser el tercero en MD+</div>
+            </div>
+          </div>
+<pre class="bg-dark text-white p-2 rounded"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col"&gt;Primero en código&lt;/div&gt;
+    &lt;div class="col order-5"&gt;Segundo en código, orden 5&lt;/div&gt;
+    &lt;div class="col order-1"&gt;Tercero en código, orden 1&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Ejemplo Responsivo --&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-4 order-md-2"&gt;Bloque A (segundo en md+)&lt;/div&gt;
+    &lt;div class="col-md-4 order-md-1"&gt;Bloque B (primero en md+)&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+      </section>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>
