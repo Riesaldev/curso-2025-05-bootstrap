@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Componentes básicos de Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Guía de componentes básicos de Bootstrap 5.3.6</h1>
+      <p class="lead">Esta guía ilustra el uso de componentes básicos de Bootstrap.</p>
+
+      <!-- Buttons -->
+      <section id="buttons" class="my-5">
+        <h2>Botones (Buttons)</h2>
+        <p>Documentación: <a href="https://getbootstrap.com/docs/5.3/components/buttons/" target="_blank">https://getbootstrap.com/docs/5.3/components/buttons/</a></p>
+
+        <h3 class="mt-4">Variantes de Botones</h3>
+        <button type="button" class="btn btn-primary me-1">Primary</button>
+        <button type="button" class="btn btn-secondary me-1">Secondary</button>
+        <button type="button" class="btn btn-success me-1">Success</button>
+        <button type="button" class="btn btn-danger me-1">Danger</button>
+        <button type="button" class="btn btn-warning me-1">Warning</button>
+        <button type="button" class="btn btn-info me-1">Info</button>
+        <button type="button" class="btn btn-light me-1">Light</button>
+        <button type="button" class="btn btn-dark me-1">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+
+        <h3 class="mt-4">Botones Outline</h3>
+        <button type="button" class="btn btn-outline-primary me-1">Primary</button>
+        <button type="button" class="btn btn-outline-secondary me-1">Secondary</button>
+        <button type="button" class="btn btn-outline-success me-1">Success</button>
+        <button type="button" class="btn btn-outline-danger me-1">Danger</button>
+        <button type="button" class="btn btn-outline-warning me-1">Warning</button>
+        <button type="button" class="btn btn-outline-info me-1">Info</button>
+        <button type="button" class="btn btn-outline-light me-1">Light</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+
+        <h3 class="mt-4">Tamaños de Botones</h3>
+        <button type="button" class="btn btn-primary btn-lg me-1">Large button</button>
+        <button type="button" class="btn btn-secondary btn-lg me-1">Large button</button>
+        <br><br>
+        <button type="button" class="btn btn-primary btn-sm me-1">Small button</button>
+        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+
+        <h3 class="mt-4">Estado Deshabilitado</h3>
+        <button type="button" class="btn btn-primary" disabled>Primary button</button>
+        <button type="button" class="btn btn-secondary" disabled>Button</button>
+        <a href="#" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+        <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>
+      </section>
+
+      <hr>
+
+      <!-- Button group -->
+      <section id="button-group" class="my-5">
+        <h2>Grupo de Botones (Button group)</h2>
+        <p>Documentación: <a href="https://getbootstrap.com/docs/5.3/components/button-group/" target="_blank">https://getbootstrap.com/docs/5.3/components/button-group/</a></p>
+
+        <h3 class="mt-4">Básico</h3>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary">Left</button>
+          <button type="button" class="btn btn-primary">Middle</button>
+          <button type="button" class="btn btn-primary">Right</button>
+        </div>
+
+        <h3 class="mt-4">Mixed Styles</h3>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Left</button>
+          <button type="button" class="btn btn-warning">Middle</button>
+          <button type="button" class="btn btn-success">Right</button>
+        </div>
+
+        <h3 class="mt-4">Outline Styles</h3>
+        <div class="btn-group" role="group" aria-label="Basic outlined example">
+          <button type="button" class="btn btn-outline-primary">Left</button>
+          <button type="button" class="btn btn-outline-primary">Middle</button>
+          <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+
+
+        <h3 class="mt-4">Tamaños</h3>
+        <div class="btn-group btn-group-lg mb-2" role="group" aria-label="Large button group">
+          <button type="button" class="btn btn-outline-primary">Left</button>
+          <button type="button" class="btn btn-outline-primary">Middle</button>
+          <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+        <br>
+        <div class="btn-group mb-2" role="group" aria-label="Default button group">
+          <button type="button" class="btn btn-outline-primary">Left</button>
+          <button type="button" class="btn btn-outline-primary">Middle</button>
+          <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+        <br>
+        <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+          <button type="button" class="btn btn-outline-primary">Left</button>
+          <button type="button" class="btn btn-outline-primary">Middle</button>
+          <button type="button" class="btn btn-outline-primary">Right</button>
+        </div>
+
+        <h3 class="mt-4">Vertical</h3>
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+          <button type="button" class="btn btn-primary">Button</button>
+          <button type="button" class="btn btn-primary">Button</button>
+          <button type="button" class="btn btn-primary">Button</button>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- Badge -->
+      <section id="badge" class="my-5">
+        <h2>Insignias (Badge)</h2>
+        <p>Documentación: <a href="https://getbootstrap.com/docs/5.3/components/badge/" target="_blank">https://getbootstrap.com/docs/5.3/components/badge/</a></p>
+
+        <h3 class="mt-4">Encabezados con Insignias</h3>
+        <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+        <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+        <h3>Example heading <span class="badge bg-secondary">New</span></h3>
+        <h4>Example heading <span class="badge bg-secondary">New</span></h4>
+        <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+        <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+
+        <h3 class="mt-4">Botones con Insignias</h3>
+        <button type="button" class="btn btn-primary">
+          Notifications <span class="badge text-bg-secondary">4</span>
+        </button>
+
+        <h3 class="mt-4">Insignias Posicionadas</h3>
+        <button type="button" class="btn btn-primary position-relative me-3">
+          Inbox
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            99+
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+        <button type="button" class="btn btn-dark position-relative">
+          Profile
+          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-success border border-light rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </button>
+
+
+        <h3 class="mt-4">Variantes de Color de Fondo: desde v5.2.0</h3>
+        <span class="badge text-bg-primary me-1">Primary</span>
+        <span class="badge text-bg-secondary me-1">Secondary</span>
+        <span class="badge text-bg-success me-1">Success</span>
+        <span class="badge text-bg-danger me-1">Danger</span>
+        <span class="badge text-bg-warning me-1">Warning</span>
+        <span class="badge text-bg-info me-1">Info</span>
+        <span class="badge text-bg-light me-1">Light</span>
+        <span class="badge text-bg-dark">Dark</span>
+
+        <h3 class="mt-4">Insignias tipo "Pill"</h3>
+        <span class="badge rounded-pill text-bg-primary me-1">Primary</span>
+        <span class="badge rounded-pill text-bg-secondary me-1">Secondary</span>
+        <span class="badge rounded-pill text-bg-success me-1">Success</span>
+        <span class="badge rounded-pill text-bg-danger me-1">Danger</span>
+        <span class="badge rounded-pill text-bg-warning me-1">Warning</span>
+        <span class="badge rounded-pill text-bg-info me-1">Info</span>
+        <span class="badge rounded-pill text-bg-light me-1">Light</span>
+        <span class="badge rounded-pill text-bg-dark">Dark</span>
+      </section>
+
+      <hr>
+
+      <!-- List group -->
+      <section id="list-group" class="my-5">
+        <h2>Grupo de Listas (List group)</h2>
+        <p>Documentación: <a href="https://getbootstrap.com/docs/5.3/components/list-group/" target="_blank">https://getbootstrap.com/docs/5.3/components/list-group/</a></p>
+
+        <h3 class="mt-4">Básico</h3>
+        <ul class="list-group">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+
+        <h3 class="mt-4">Items Activos y Deshabilitados</h3>
+        <ul class="list-group">
+          <li class="list-group-item active" aria-current="true">An active item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item disabled" aria-disabled="true">A disabled item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+
+        <h3 class="mt-4">Links y Botones</h3>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            The current link item
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">A second link item</a>
+          <button type="button" class="list-group-item list-group-item-action">A button item</button>
+          <button type="button" class="list-group-item list-group-item-action" disabled>A disabled button item</button>
+        </div>
+
+        <h3 class="mt-4">Flush (sin bordes)</h3>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+        </ul>
+
+        <h3 class="mt-4">Numerado</h3>
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item">A list item</li>
+          <li class="list-group-item">A list item</li>
+          <li class="list-group-item">A list item</li>
+        </ol>
+
+        <h3 class="mt-4">Horizontal</h3>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm mt-2">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+
+
+        <h3 class="mt-4">Con Insignias</h3>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            A list item
+            <span class="badge text-bg-primary rounded-pill">14</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            A second list item
+            <span class="badge text-bg-primary rounded-pill">2</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            A third list item
+            <span class="badge text-bg-primary rounded-pill">1</span>
+          </li>
+        </ul>
+
+        <h3 class="mt-4">Contenido Personalizado</h3>
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small>And some small print.</small>
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">List group item heading</h5>
+              <small class="text-body-secondary">3 days ago</small>
+            </div>
+            <p class="mb-1">Some placeholder content in a paragraph.</p>
+            <small class="text-body-secondary">And some muted small print.</small>
+          </a>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- Card -->
+      <section id="card" class="my-5">
+        <h2>Tarjetas (Card)</h2>
+        <p>Documentación: <a href="https://getbootstrap.com/docs/5.3/components/card/" target="_blank">https://getbootstrap.com/docs/5.3/components/card/</a></p>
+
+        <h3 class="mt-4">Tarjeta Básica</h3>
+        <div class="card" style="width: 18rem;">
+          <img src="https://placehold.co/286x180.png?text=Card+Image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <h3 class="mt-4">Contenido de la Tarjeta</h3>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+
+        <h3 class="mt-4">Imágenes en Tarjetas</h3>
+        <div class="card" style="width: 18rem;">
+          <img src="https://placehold.co/286x180.png?text=Image+Top" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+        <br>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <img src="https://placehold.co/286x180.png?text=Image+Bottom" class="card-img-bottom" alt="...">
+        </div>
+
+
+        <h3 class="mt-4">Grupo de Listas en Tarjetas</h3>
+        <div class="card" style="width: 18rem;">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+        </div>
+
+        <h3 class="mt-4">Kitchen Sink (Ejemplo Completo)</h3>
+        <div class="card" style="width: 18rem;">
+          <img src="https://placehold.co/286x180.png?text=Kitchen+Sink" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+
+        <h3 class="mt-4">Cabecera y Pie de Página</h3>
+        <div class="card text-center mt-3">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <div class="card-footer text-body-secondary">
+            2 days ago
+          </div>
+        </div>
+      </section>
+
+      <hr>
+
+      <!-- Images -->
+      <section id="images" class="my-5">
+        <h2>Imágenes (Images)</h2>
+        <p>Documentación: <a href="https://getbootstrap.com/docs/5.3/content/images/" target="_blank">https://getbootstrap.com/docs/5.3/content/images/</a></p>
+
+        <h3 class="mt-4">Imágenes Responsivas</h3>
+        <p>Imagen normal sin ninguna clase de bootstrap:</p>
+        <img src="https://placehold.co/1200x400.png?text=Responsive+Image" alt="Responsive image">
+
+        <p>Imagen responsive con img-fluid</p>
+        <img src="https://placehold.co/1200x400.png?text=Responsive+Image" class="img-fluid" alt="Responsive image">
+
+        <h3 class="mt-4">Miniaturas (Thumbnails)</h3>
+        <img src="https://placehold.co/200x200.png?text=Thumbnail" class="img-thumbnail" alt="Thumbnail image">
+
+        <h3 class="mt-4">Alineación de Imágenes</h3>
+        <img src="https://placehold.co/200x200.png?text=Float+Start" class="rounded float-start" alt="...">
+        <img src="https://placehold.co/200x200.png?text=Float+End" class="rounded float-end" alt="...">
+        <div class="clearfix"></div>
+        <img src="https://placehold.co/200x200.png?text=MX+Auto+d-block" class="rounded mx-auto d-block mt-3" alt="...">
+      </section>
+
+      <hr>
+
+      <!-- Tables -->
+      <section id="tables" class="my-5">
+        <h2>Tablas (Tables)</h2>
+        <p>Documentación: <a href="https://getbootstrap.com/docs/5.3/content/tables/" target="_blank">https://getbootstrap.com/docs/5.3/content/tables/</a></p>
+
+        <h3 class="mt-4">Tabla Básica</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="mt-4">Variantes de Tabla</h3>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table table-primary">
+           <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+        <h3 class="mt-4">Filas Rayadas (Striped rows)</h3>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="mt-4">Filas Flotantes (Hoverable rows)</h3>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="mt-4">Tablas con Bordes</h3>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="mt-4">Tablas sin Bordes</h3>
+        <table class="table table-borderless">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="mt-4">Tablas Pequeñas</h3>
+        <table class="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <h3 class="mt-4">Tablas Responsivas</h3>
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+                <th scope="col">Heading</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+                <td>Cell</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -450,9 +450,11 @@ Más similar a tailwind, pero con la filosofía de bootstrap.
 * Tables
 * Cards
 * Images
-* List Groups
+* List Groups, list-unstyled, list-inline
 
 ### Componentes de navegación
+
+* Nav....
 
 ### Componentes de notificación y feedback
 
