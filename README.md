@@ -465,6 +465,6 @@ Más similar a tailwind, pero con la filosofía de bootstrap.
 # Integración con frameworks:
 
 * Angular: se suele usar NgBootstrap en forma de componentes de Angular.
-    * Bootstrap CSS: https://ng-bootstrap.github.io/
+    * NgBootstrap: usa Bootstrap CSS https://ng-bootstrap.github.io/
     * PrimeNG: que está basado en Tailwind CSS
     * Angular Material: que está basado en Material Design
