@@ -467,14 +467,50 @@ Más similar a tailwind, pero con la filosofía de bootstrap.
 * Pagination: botones para pasar de una página a otra, el contenido vendría paginado desde backend (LIMIT, OFFSET, TOP)
 * Scrollspy: actualiza menús en base a la posición del scroll
 
+CONSEJO: 
+
+Si queremos posicionar urls se recomienda que tengan slugs claros:
+
+
+Básico:
+
+* localhost:8080/tutoriales/4
+* localhost:8080/tutoriales/33efee79-6a0f-4e5d-be35-c1be3a656477
+
+SEO friendly:
+
+* empresa.com/tutorial-java-oop-polimorfismo-y-herencia
+* empresa.com/java/tutorial/oop-polimorfismo-y-herencia
 
 ### Componentes de notificación y feedback
+
+* Alerts: mostrar mensajes informativos usando código de color verde éxito, amarillo warning, rojo peligro.
+
+* Toasts: mensajes emergentes temporales no interrumpen la experiencia.
+
+* Close button: botón de cierre con una cruz
+
+* Spinners: indica progreso de carga o acción, con una animación
+
+* Progress: barra de progreso con porcentaje, stripped, animada
+
+* Placeholders: también conocidos como skeleton, representación visual del contenido mientras se termina de cargar.
+
+* Tooltips: información adicional cuando se hace hover sobre un elemento.
+
+* Popovers: es como el tooltip pero más grande y con más contenido, para información contextual más amplia.
+
+* Modal: Crear ventanas que permitan al usuario ver contenido e interactual, por ejemplo login, ofertas, cuando quieres borrar un item o hacer una acción que modifica algo mostramos un modal de confirmación.
 
 ### Componentes de contenido dinámico
 
 ## Modo oscuro
 
 ## Formularios
+
+## Boostrap icons
+
+Similar Font Awesome.
 
 # Integración con frameworks:
 
