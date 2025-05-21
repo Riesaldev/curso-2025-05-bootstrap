@@ -444,21 +444,35 @@ Más similar a tailwind, pero con la filosofía de bootstrap.
 
 ### Componentes básicos
 
-* Button
-* Button Group
-* Badge
-* Tables
-* Cards
-* Images
-* List Groups, list-unstyled, list-inline
+* Button: botones para desencadenar acciones o enviar formulario o navegar entre páginas.
+
+* Button Group: agrupar acciones relacionadas en una sola línea, útil para agrupar acciones masivas.
+
+* Badge: mostrar contadores, estados.
+
+* Tables: mostrar datos tabulares especialmente para la parte de administración, se suelen combinar con botones, 
+
+* Cards: contenedores flexibles para items, card de producto,
+
+* Images: img-fluid
+
+* Listas: List Groups, list-unstyled, list-inline, contenido relacionado o items de una lista de datos que viene de backend
 
 ### Componentes de navegación
 
-* Nav....
+* Navs & tabs: menús de navegación horizontal o vertical, pestañas que se seleccionan y cambian un contenido
+* Navbar: barra de navegación responsive y con menú hamburguesa, distintos colores
+* Dropdowns: menús desplegables para agrupar opciones
+* Breadcrumb: facilitar la navegación entre mucho contenido agrupado por categorías
+* Pagination: botones para pasar de una página a otra, el contenido vendría paginado desde backend (LIMIT, OFFSET, TOP)
+* Scrollspy: actualiza menús en base a la posición del scroll
+
 
 ### Componentes de notificación y feedback
 
 ### Componentes de contenido dinámico
+
+## Modo oscuro
 
 ## Formularios
 
