@@ -515,8 +515,21 @@ SEO friendly:
 
 ## Modo oscuro
 
+Desde la versión v5.3.
+
+En Bootstrap 5.3, el dark mode se implementa utilizando el atributo ``data-bs-theme`` que puede aplicarse al elemento ``<html>`` para un cambio global, o a componentes específicos para cambios localizados. Por ejemplo:
+
+``<html lang="en" data-bs-theme="dark">``
+
+Bootstrap automáticamente aplica los estilos oscuros a todos los componentes dentro de ese contenedor sin necesidad de añadir clases adicionales ni prefijos ``dark:`` como en tailwind.
+
+También es posible crear temas personalizados por ejemplo para B2B: 
+
+https://getbootstrap.com/docs/5.3/customize/color-modes/#adding-theme-colors
+
 
 ## Formularios
+
 
 
 ## Boostrap icons
