@@ -504,15 +504,34 @@ SEO friendly:
 
 ### Componentes de contenido dinámico
 
+* Collapse: mostrar y ocultar contenido de forma expandible, FAQs preguntas y respuestas.
+
+* Accordion: paneles colapsables agrupados donde puede estar abierto uno o varios a la vez.
+
+* Offcanvas:  panel lateral oculto se revela al ejecutar una acción o clic para mostrar información adicional.
+
+* Carousel: contenido deslizable como imágenes. CUIDADO: si las imágenes tienen distinta resolución de alto, producirá layout shift moviendo contenido, lo cuál puede quedar mal.
+
+
 ## Modo oscuro
 
+
 ## Formularios
+
 
 ## Boostrap icons
 
 Similar Font Awesome.
 
-# Integración con frameworks:
+## Grid de productos
+
+## Dashboard
+
+
+## Personalización
+
+
+## Integración con frameworks:
 
 * Angular: se suele usar NgBootstrap en forma de componentes de Angular.
     * NgBootstrap: usa Bootstrap CSS https://ng-bootstrap.github.io/
