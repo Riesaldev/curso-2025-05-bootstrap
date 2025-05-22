@@ -638,10 +638,17 @@ Ver más: https://getbootstrap.com/docs/5.3/customize/sass/#including
 
 ## Grid de productos
 
+Ver ejemplo
 
 ## Dashboard
 
+Ver ejemplo
 
+## Extra
+
+Que es la Gestalt | Principios de percepción visual
+
+https://www.youtube.com/watch?v=oW6dwEZIf3g
 
 
 ## Integración con frameworks:
