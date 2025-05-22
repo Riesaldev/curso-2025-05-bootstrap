@@ -611,14 +611,22 @@ Producto y Categoría(many-to-one).
 
 Similar Font Awesome.
 
+https://icons.getbootstrap.com/
+
+Alternativa:
+
+https://fontawesome.com/
+
+## Personalización
+
 
 
 ## Grid de productos
 
+
 ## Dashboard
 
 
-## Personalización
 
 
 ## Integración con frameworks:
