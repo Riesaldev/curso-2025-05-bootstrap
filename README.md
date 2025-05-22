@@ -619,6 +619,21 @@ https://fontawesome.com/
 
 ## Personalización
 
+Requisitos: tener node instalado.
+
+cd customization
+
+npm install bootstrap
+
+npm install -g sass
+
+sass --version
+
+sass custom.scss custom.css
+
+sass --watch scss/custom.scss:css/custom.css
+
+Ver más: https://getbootstrap.com/docs/5.3/customize/sass/#including
 
 
 ## Grid de productos
