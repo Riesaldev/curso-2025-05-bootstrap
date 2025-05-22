@@ -530,11 +530,88 @@ https://getbootstrap.com/docs/5.3/customize/color-modes/#adding-theme-colors
 
 ## Formularios
 
+### **Overview**
+* **`.form-label`** - Etiquetas de formulario con márgenes apropiados
+* **`.form-text`** - Texto de ayuda pequeño y atenuado 
+* **`.visually-hidden`** - Oculta visualmente manteniendo accesibilidad
+* **`disabled`** - Deshabilita elementos | **`fieldset[disabled]`** - Deshabilita grupo completo
 
+### **Form control**
+* **`.form-control`** - Input base (text, email, password, textarea, file)
+* **`.form-control-plaintext`** - Input readonly con apariencia de texto
+* **`.form-control-lg`** - Input grande | **`.form-control-sm`** - Input pequeño
+* **`.form-control-color`** - Input de color con estilos especiales
+
+### **Select**
+* **`.form-select`** - Select personalizado
+* **`.form-select-lg`** - Select grande | **`.form-select-sm`** - Select pequeño
+* **`multiple`** - Selección múltiple | **`size="n"`** - Opciones visibles
+
+### **Checks & radios**
+* **`.form-check`** - Contenedor | **`.form-check-input`** - Input | **`.form-check-label`** - Etiqueta
+* **`.form-check-inline`** - En línea horizontal
+* **`.form-switch`** - Checkbox como toggle switch
+* **`.btn-check`** - Checkbox/radio con apariencia de botón
+
+### **Range**
+* **`.form-range`** - Range personalizado
+* **`min/max/step`** - Atributos de configuración
+
+### **Input group**
+* **`.input-group`** - Contenedor | **`.input-group-text`** - Texto/icono anexo
+* **`.input-group-sm`** - Pequeño | **`.input-group-lg`** - Grande
+* **`.form-check-input.mt-0`** - Checkbox/radio en grupo
+
+### **Floating labels**
+* **`.form-floating`** - Contenedor para etiquetas flotantes
+* Requiere `placeholder` en input e input antes que label
+
+### **Layout**
+* **`.mb-3`** - Espaciado entre campos
+* **`.row`** + **`.col-*`** - Layout con grid
+* **`.col-form-label`** - Etiqueta alineada en layout horizontal
+* **`.g-*`** - Espaciado grid | **`.align-items-center`** - Alineación vertical
+
+### **Validation**
+* **`.needs-validation`** - Validación JS | **`.was-validated`** - Validación automática
+* **`.is-valid`** - Campo válido | **`.is-invalid`** - Campo inválido
+* **`.valid-feedback`** - Mensaje éxito | **`.invalid-feedback`** - Mensaje error
+* **`.valid-tooltip`** - Tooltip éxito | **`.invalid-tooltip`** - Tooltip error
+* **`novalidate`** - Desactiva validación nativa | **`required`** - Campo obligatorio
+
+Como extra, que no ofrece bootstrap está el concepto editor enriquecido o editor WYSIWYG:
+
+* CKEditor: https://ckeditor.com/ckeditor-5/demo/
+* TinyMCE: https://www.tiny.cloud/docs/tinymce/latest/cloud-quick-start/
+
+Casos de uso:
+
+* login y registro
+* buscador 
+* campo correo newsletter
+* Administración: Crear y editar entidades-modelos
+* Formulario de review u opinión en un producto o servicio
+* Formulario publicar un post en una red social
+
+Seguridad: son críticos ya que envían datos a backend y se almacenan en base de datos. Posible entrada para SQLInjection, fuente de errores si no tienes bien las validaciones a nivel de frontend como de backend. A la hora de insertar en base de datos normalmente los ORM o la capa de persistencia debería sanitizar esa entrada usar sentencias parametrizadas para evitar que se rompa el SQL al ejecutarlo en base de datos.
+
+* Formularios avanzados: se suele combinar varios tipos de input (checkbox, buscador, selector) para hacer componentes avanzados que permitan buscar y seleccionar: 
+
+https://primeng.org/multiselect
+
+
+Bootstrap nos proporciona clases básicas para los inputs, textarea, select, checkbox, radio.
+
+CUIDADO: hay que tener en cuenta las asociaciones entre entidades: many-to-one select simple, many-to-many select multiple, one-to-one select simple.
+
+Comentarios en Producto (many-to-one).
+Producto y Categoría(many-to-one).
 
 ## Boostrap icons
 
 Similar Font Awesome.
+
+
 
 ## Grid de productos
 
